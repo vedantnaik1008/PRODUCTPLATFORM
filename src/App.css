@@ -67,13 +67,27 @@ body{
 }
 
 .text_in{
-  animation: text_in .5s ease;
+  animation: text_in .8s ease forwards;
 }
 
 .right{
   animation: right .5s ease;
 }
 
+.left{
+  animation: left .5s ease;
+}
+
+@keyframes left {
+  0%{
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 
 @keyframes right {
   0%{
@@ -107,6 +121,7 @@ body{
 }
 @keyframes text_in {
   0%{
+    opacity: 0;
     transform: translateX(100%);
   }
   20%{
@@ -122,6 +137,7 @@ body{
     transform: translateX(20%);
   }
   100%{
+    opacity: 1;
     transform: translateX(0%);
   }
 }

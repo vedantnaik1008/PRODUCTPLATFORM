@@ -103,7 +103,7 @@ console.log(currentIndex);
                         {Text.map((item, index) => (
                             <span
                                 key={item.color}
-                                className={`transition-opacity duration-500 ${
+                                className={`transition-opacity duration-500 w-full ${
                                     index === currentIndex
                                         ? 'text_in'
                                         : 'hidden'
@@ -134,7 +134,7 @@ console.log(currentIndex);
                         ))}
                     </p>
                     <div className='relative self-center hidden md:block'>
-                        <button className='bg-white rounded-md start-btn  text-black  py-[6px] px-4 font-semibold md:text-lg text-4xl  llg:mr-[80px]'>
+                        <button className='bg-white rounded-md start-btn  text-black  py-[6px] px-4 font-semibold md:text-lg lgg:text-4xl  llg:mr-[80px]'>
                             Register for free
                         </button>
                     </div>
