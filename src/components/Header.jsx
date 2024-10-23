@@ -119,7 +119,9 @@ const Header = () => {
                       alt=''
                       className='w-[40%] md:w-[20%] mx-auto md:mx-0  lgg:justify-items-start lgg:relative'
                   />
-                  {click ? <Mobile click={click} setClick={setClick} /> : null}
+                  {click ? <div className=" ">
+                      <Mobile click={click} setClick={setClick} />
+                  </div> : null}
                   <Desktop />
               </div>
           </header>

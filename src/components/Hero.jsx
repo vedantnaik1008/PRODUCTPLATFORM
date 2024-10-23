@@ -61,8 +61,8 @@ console.log(currentIndex);
     return (
         <section className='hero'>
             <div className='md:h-[70dvh] lgg:h-[62dvh] w-[90%] mx-auto flex flex-col-reverse md:flex-col lgg:flex-row md:justify-between xl:justify-around items-center'>
-                <div className='relative self-center block md:hidden'>
-                    <button className='bg-white rounded-md  text-black  py-[6px] px-4 font-semibold text-lg mt-5'>
+                <div className='relative self-center block md:hidden '>
+                    <button className='start-btn font-semibold text-sm mt-5 rounded-md'>
                         Register for free
                     </button>
                 </div>
@@ -134,7 +134,7 @@ console.log(currentIndex);
                         ))}
                     </p>
                     <div className='relative self-center hidden md:block'>
-                        <button className='bg-white rounded-md  text-black  py-[6px] px-4 font-semibold md:text-lg text-4xl  llg:mr-[80px]'>
+                        <button className='bg-white rounded-md start-btn  text-black  py-[6px] px-4 font-semibold md:text-lg text-4xl  llg:mr-[80px]'>
                             Register for free
                         </button>
                     </div>
