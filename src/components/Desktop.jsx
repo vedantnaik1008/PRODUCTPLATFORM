@@ -41,8 +41,8 @@ const Desktop = () => {
                           <div
                               className={`transition-all duration-500 ease-in-out ${
                                   hoverState.learn
-                                      ? 'translate-x-0'
-                                      : '-translate-x-52'
+                                      ? 'right'
+                                      : '0'
                               } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
                               <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
                                   <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
@@ -94,7 +94,11 @@ const Desktop = () => {
                           alt=''
                       />
                       {hoverState.practice ? (
-                          <div className='absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]'>
+                          <div className={`transition-all duration-500 ease-in-out ${
+                                  hoverState.practice
+                                      ? 'right'
+                                      : '0'
+                              } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
                               <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
                                   <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
                                       <img
@@ -137,7 +141,11 @@ const Desktop = () => {
                           alt=''
                       />
                       {hoverState.community ? (
-                          <div className='absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]'>
+                          <div className={`transition-all duration-500 ease-in-out ${
+                                  hoverState.community
+                                      ? 'right'
+                                      : '0'
+                              } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
                               <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
                                   <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
                                       <img

@@ -70,6 +70,22 @@ body{
   animation: text_in .5s ease;
 }
 
+.right{
+  animation: right .5s ease;
+}
+
+
+@keyframes right {
+  0%{
+    opacity: 0;
+    transform: translate(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
 @keyframes appear {
   0%{
     display: none;

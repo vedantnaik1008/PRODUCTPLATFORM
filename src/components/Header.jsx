@@ -105,7 +105,7 @@ const Header = () => {
                   ))}
               </div>
           </div>
-          <header className='bg-[#0f0f0f]'>
+          <header className='bg-[#0f0f0f] relative'>
               <div className='mx-auto w-[95%] flex justify-between py-5 items-center'>
                   <div
                       className='flex flex-col gap-1 lgg:hidden'
