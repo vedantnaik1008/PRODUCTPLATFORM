@@ -117,7 +117,7 @@ const Header = () => {
                   <img
                       src={logo}
                       alt=''
-                      className='w-[40%] md:w-[20%] mx-auto  lgg:justify-items-start lgg:relative'
+                      className='w-[40%] md:w-[20%] mx-auto md:mx-0  lgg:justify-items-start lgg:relative'
                   />
                   {click ? <Mobile click={click} setClick={setClick} /> : null}
                   <Desktop />
