@@ -15,7 +15,7 @@ const Header = () => {
     
   return (
       <>
-          <div className='bg-[#144c894d]'>
+          <div className='bg-[#144c894d] overflow-hidden'>
               <div className='w-[95%] mx-auto py-3 font-semibold'>
                   {BannerText.map((item, index) => (
                       <div
