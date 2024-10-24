@@ -5,7 +5,6 @@ import IQ from '../assets/interview-3a05a99d.svg';
 import Cs from '../assets/caseStudyIcon-4cc33f2b.svg';
 import ProductTalk from '../assets/product_talks_icon-4f062cc2.svg';
 import Blogs from '../assets/blogIcon-5b91f53a.svg';
-import dropDown from '../assets/dropdown-a2724aec.svg';
 import { useState } from 'react';
 
 const Desktop = () => {
@@ -28,15 +27,25 @@ const Desktop = () => {
                                 community: false
                             }))
                         }
-                        className='flex items-center gap-1 text-gray-400 hover:text-white text-lg font-semibold'>
-                        <p className=''>Learn</p>{' '}
-                        <img
-                            src={dropDown}
+                        className='flex items-center gap-1 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'>
+                        <p className=''>Learn</p>
+                        <svg
                             className={`transition-all duration-500 ease-in-out ${
                                 hoverState.learn ? 'rotate-180' : 'rotate-0'
-                            } hover:fill-white fill-gray-400 w-[18%]`}
-                            alt=''
-                        />
+                            }   w-[18%]`}
+                            width='20'
+                            height='13'
+                            viewBox='0 0 20 13'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <path
+                                d='M2 2L9.66387 10L17.6303 2'
+                                stroke='#fefefe80'
+                                strokeWidth='4'
+                                strokeLinecap='round'
+                                className='hover:stroke-white'
+                            />
+                        </svg>
                         {hoverState.learn ? (
                             <div
                                 className={`transition-all duration-500 ease-in-out ${
@@ -82,15 +91,25 @@ const Desktop = () => {
                                 community: false
                             }))
                         }
-                        className='flex items-center gap-1 text-gray-400 hover:text-white text-lg font-semibold'>
+                        className='flex items-center gap-1 text-[#fefefe80] hover:text-white text-lg font-semibold'>
                         <p className=''>Practice</p>{' '}
-                        <img
-                            src={dropDown}
+                        <svg
                             className={`transition-all duration-500 ease-in-out ${
                                 hoverState.practice ? 'rotate-180' : 'rotate-0'
-                            } hover:fill-white fill-gray-400 w-[15%]`}
-                            alt=''
-                        />
+                            }   w-[14%]`}
+                            width='20'
+                            height='13'
+                            viewBox='0 0 20 13'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <path
+                                d='M2 2L9.66387 10L17.6303 2'
+                                stroke='#fefefe80'
+                                strokeWidth='4'
+                                strokeLinecap='round'
+                                className='hover:stroke-white'
+                            />
+                        </svg>
                         {hoverState.practice ? (
                             <div
                                 className={`transition-all duration-500 ease-in-out ${
@@ -128,15 +147,25 @@ const Desktop = () => {
                                 community: !hoverState.community
                             }))
                         }
-                        className='flex items-center gap-1 text-gray-400 hover:text-white text-lg font-semibold'>
+                        className='flex items-center gap-1 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'>
                         <p className=''>Community</p>{' '}
-                        <img
-                            src={dropDown}
+                        <svg
                             className={`transition-all duration-500 ease-in-out ${
                                 hoverState.community ? 'rotate-180' : 'rotate-0'
-                            } hover:fill-white fill-gray-400 w-[11%]`}
-                            alt=''
-                        />
+                            }   w-[11%]`}
+                            width='20'
+                            height='13'
+                            viewBox='0 0 20 13'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <path
+                                d='M2 2L9.66387 10L17.6303 2'
+                                stroke='#fefefe80'
+                                strokeWidth='4'
+                                strokeLinecap='round'
+                                className='hover:stroke-white'
+                            />
+                        </svg>
                         {hoverState.community ? (
                             <div
                                 className={`transition-all duration-500 ease-in-out ${
@@ -174,7 +203,7 @@ const Desktop = () => {
                 </li>
                 <li className='hidden lgg:block'>
                     <a
-                        className='flex items-center gap-2 text-gray-400 hover:text-white text-lg font-semibold'
+                        className='flex items-center gap-2 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'
                         href=''>
                         Live Project
                     </a>

@@ -13,7 +13,6 @@ const Header = () => {
         data: BannerText
     });
     
-    console.log(currentIndex);
   return (
       <>
           <div className='bg-[#144c894d]'>
@@ -66,9 +65,9 @@ const Header = () => {
                       alt=''
                       className='w-[40%] md:w-[20%] mx-auto md:mx-0  lgg:justify-items-start lgg:relative'
                   />
-                  {click ? <div className=" ">
+                  {click ? <>
                       <Mobile click={click} setClick={setClick} />
-                  </div> : null}
+                  </> : null}
                   <Desktop />
               </div>
           </header>
