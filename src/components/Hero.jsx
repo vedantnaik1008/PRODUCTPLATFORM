@@ -14,7 +14,7 @@ const Hero = () => {
                         Register for free
                     </button>
                 </div>
-                <div className='xl:w-[40%]  md:hidden  justify-end flex'>
+                <div className='xl:w-[40%] h-[30dvh]  md:hidden  justify-end flex'>
                     {HeroText.map((item, index) => (
                         <React.Fragment key={item.img}>
                             <img
@@ -23,7 +23,9 @@ const Hero = () => {
                                 width={320}
                                 height={320}
                                 className={` w-[317px]  transition-opacity duration-500 ${
-                                    index === currentIndex ? 'appear' : 'hidden'
+                                    index === currentIndex
+                                        ? 'appear'
+                                        : 'hidden'
                                 } `}
                             />
                         </React.Fragment>
