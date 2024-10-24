@@ -1,11 +1,6 @@
-import CC from '../assets/flashCard-5a0854a6.svg';
-import Sam from '../assets/sampleQ_AIcon-161232ec.svg';
-import frame from '../assets/frameworkIcon-10a04e46.svg';
-import IQ from '../assets/interview-3a05a99d.svg';
-import Cs from '../assets/caseStudyIcon-4cc33f2b.svg';
-import ProductTalk from '../assets/product_talks_icon-4f062cc2.svg';
-import Blogs from '../assets/blogIcon-5b91f53a.svg';
 import { useState } from 'react';
+import HoverList from './HoverList';
+import Svg from './ui/Svg';
 
 const Desktop = () => {
     const [hoverState, setHoverState] = useState({
@@ -29,56 +24,13 @@ const Desktop = () => {
                         }
                         className='flex items-center gap-1 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'>
                         <p className=''>Learn</p>
-                        <svg
-                            className={`transition-all duration-500 ease-in-out ${
-                                hoverState.learn ? 'rotate-180' : 'rotate-0'
-                            }   w-[18%]`}
-                            width='20'
-                            height='13'
-                            viewBox='0 0 20 13'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <path
-                                d='M2 2L9.66387 10L17.6303 2'
-                                stroke='#fefefe80'
-                                strokeWidth='4'
-                                strokeLinecap='round'
-                                className='hover:stroke-white'
-                            />
-                        </svg>
-                        {hoverState.learn ? (
-                            <div
-                                className={`transition-all duration-500 ease-in-out ${
-                                    hoverState.learn ? 'right' : '0'
-                                } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
-                                <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={CC}
-                                            alt=''
-                                            className='w-[20%]'
-                                        />{' '}
-                                        <p className=''>Concept Cards</p>
-                                    </li>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={Sam}
-                                            className='w-[20%]'
-                                            alt=''
-                                        />{' '}
-                                        <p className=''>Sample Q&A</p>
-                                    </li>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={frame}
-                                            className='w-[20%]'
-                                            alt=''
-                                        />{' '}
-                                        <p className=''>Frameworks</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        ) : null}
+                        <Svg state={hoverState.learn} className={'w-[18%]'} />
+                        <HoverList
+                            start={4}
+                            end={7}
+                            state={hoverState.learn}
+                            hoverState={hoverState}
+                        />
                     </div>
                 </li>
                 <li className=' relative hidden lgg:block'>
@@ -93,48 +45,16 @@ const Desktop = () => {
                         }
                         className='flex items-center gap-1 text-[#fefefe80] hover:text-white text-lg font-semibold'>
                         <p className=''>Practice</p>{' '}
-                        <svg
-                            className={`transition-all duration-500 ease-in-out ${
-                                hoverState.practice ? 'rotate-180' : 'rotate-0'
-                            }   w-[14%]`}
-                            width='20'
-                            height='13'
-                            viewBox='0 0 20 13'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <path
-                                d='M2 2L9.66387 10L17.6303 2'
-                                stroke='#fefefe80'
-                                strokeWidth='4'
-                                strokeLinecap='round'
-                                className='hover:stroke-white'
-                            />
-                        </svg>
-                        {hoverState.practice ? (
-                            <div
-                                className={`transition-all duration-500 ease-in-out ${
-                                    hoverState.practice ? 'right' : '0'
-                                } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
-                                <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={IQ}
-                                            className='w-[20%]'
-                                            alt=''
-                                        />{' '}
-                                        <p className=''>Interview Questions</p>
-                                    </li>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={Cs}
-                                            alt=''
-                                            className='w-[20%]'
-                                        />{' '}
-                                        <p className=''>Case studies</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        ) : null}
+                        <Svg
+                            state={hoverState.practice}
+                            className={'w-[14%]'}
+                        />
+                        <HoverList
+                            start={1}
+                            end={2}
+                            state={hoverState.practice}
+                            hoverState={hoverState}
+                        />
                     </div>
                 </li>
                 <li className=' relative hidden lgg:block'>
@@ -149,56 +69,16 @@ const Desktop = () => {
                         }
                         className='flex items-center gap-1 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'>
                         <p className=''>Community</p>{' '}
-                        <svg
-                            className={`transition-all duration-500 ease-in-out ${
-                                hoverState.community ? 'rotate-180' : 'rotate-0'
-                            }   w-[11%]`}
-                            width='20'
-                            height='13'
-                            viewBox='0 0 20 13'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <path
-                                d='M2 2L9.66387 10L17.6303 2'
-                                stroke='#fefefe80'
-                                strokeWidth='4'
-                                strokeLinecap='round'
-                                className='hover:stroke-white'
-                            />
-                        </svg>
-                        {hoverState.community ? (
-                            <div
-                                className={`transition-all duration-500 ease-in-out ${
-                                    hoverState.community ? 'right' : '0'
-                                } absolute top-10 right-0 z-10 bg-white rounded-b-lg rounded-tl-lg p-5 w-[230px]`}>
-                                <ul className='w-full text-lg font-medium flex flex-col gap-6 text-black'>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={ProductTalk}
-                                            className='w-[20%]'
-                                            alt=''
-                                        />{' '}
-                                        <p className=''>Product Talk</p>
-                                    </li>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src={Blogs}
-                                            alt=''
-                                            className='w-[20%]'
-                                        />{' '}
-                                        <p className=''>Blogs</p>
-                                    </li>
-                                    <li className='flex items-center gap-3 hover:bg-[#afd7ea]'>
-                                        <img
-                                            src=''
-                                            alt=''
-                                            className='w-[20%]'
-                                        />{' '}
-                                        <p className=''></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        ) : null}
+                        <Svg
+                            state={hoverState.community}
+                            className={'w-[10%]'}
+                        />
+                        <HoverList
+                            start={8}
+                            end={9}
+                            state={hoverState.community}
+                            hoverState={hoverState}
+                        />
                     </div>
                 </li>
                 <li className='hidden lgg:block'>
