@@ -57,6 +57,18 @@ export const data = [
 },
 ]
 
+export const desktopLinks = [
+    {
+        name: 'Live Project',
+        className:
+            'flex items-center gap-2 text-[rgba(254,_254,_254,_0.5)] hover:text-white text-lg font-semibold'
+    },
+    {
+        name: 'Portfolio',
+        className: 'flex items-center gap-2 text-white text-lg font-semibold'
+    }
+];
+
 export const BannerText = [
     {
         img: Framee,
