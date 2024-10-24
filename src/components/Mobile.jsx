@@ -1,5 +1,4 @@
 import { data } from "../data/NavLinks";
-console.log(data);
 
 // eslint-disable-next-line react/prop-types
 const Mobile = ({click, setClick}) => {

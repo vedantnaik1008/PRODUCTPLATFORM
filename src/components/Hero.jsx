@@ -1,62 +1,10 @@
-import interviewImg from '../assets/interviewLaptopIcon-2b48c087.webp';
-import sampleImg from '../assets/sampleQ_ALaptopIcon-09079d58.webp';
-import frameworkImg from '../assets/frameworkLaptopIcon-b884b948.webp';
-import caseStudiesImg from '../assets/caseStudyLaptopIcon-73352860.webp';
-import interviewImgMobile from '../assets/mobileInterviewLaptopIcon-35aff321.svg';
-import sampleImgMobile from '../assets/mobileSampleQ_ALaptopIcon-b8a906eb.svg';
-import frameworkImgMobile from '../assets/mobileFrameworkLaptopIcon-fd456dfa.svg';
-import caseStudiesImgMobile from '../assets/mobileCaseStudyLaptopIcon-7d6d1639.svg';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { HeroText } from '../data/NavLinks';
+import useIntervalAnimation from '../hooks/useIntervalAnimation';
 
-const Text = [
-    {
-        img: interviewImg,
-        imgSm: interviewImgMobile,
-        text: 'Interview Questions',
-        color: 'rgb(197, 153, 255)',
-        delay: 1000
-    },
-    {
-        img: sampleImg,
-        imgSm: sampleImgMobile,
-        text: 'Sample Q&A',
-        color: 'rgb(0, 224, 68)',
-        delay: 1500
-    },
-    {
-        img: frameworkImg,
-        imgSm: frameworkImgMobile,
-        text: 'Frameworks',
-        color: 'rgb(255, 111, 6)',
-        delay: 2000
-    },
-    {
-        img: caseStudiesImg,
-        imgSm: caseStudiesImgMobile,
-        text: 'Case Studies',
-        color: 'rgb(0, 255, 255)',
-        delay: 2500
-    }
-];
 
 const Hero = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        let timeoutId;
-
-            
-        const updateIndex = () => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % Text.length);
-        };
-
-        timeoutId = setInterval(updateIndex, 3000);
-
-        return () => {
-            clearInterval(timeoutId);
-        };
-    }, []);
-console.log(currentIndex);
+    const { currentIndex } = useIntervalAnimation({delay: 3000, data: HeroText});
 
     return (
         <section className='hero'>
@@ -67,7 +15,7 @@ console.log(currentIndex);
                     </button>
                 </div>
                 <div className='xl:w-[40%]  md:hidden  justify-end flex'>
-                    {Text.map((item, index) => (
+                    {HeroText.map((item, index) => (
                         <React.Fragment key={item.img}>
                             <img
                                 src={item.imgSm}
@@ -82,7 +30,7 @@ console.log(currentIndex);
                     ))}
                 </div>
                 <div className='xl:w-[45%]  justify-end hidden md:flex'>
-                    {Text.map((item, index) => (
+                    {HeroText.map((item, index) => (
                         <React.Fragment key={item.img}>
                             <img
                                 src={item.img}
@@ -100,7 +48,7 @@ console.log(currentIndex);
                     </p>
                     <p className='text-white font-semibold hidden md:text-3xl lgg:text-4xl md:block  mb-5 lgg:mb-16'>
                         Career with{' '}
-                        {Text.map((item, index) => (
+                        {HeroText.map((item, index) => (
                             <span
                                 key={item.color}
                                 className={`transition-opacity duration-500 w-full ${
@@ -118,7 +66,7 @@ console.log(currentIndex);
                     <p className='md:hidden block text-white font-semibold  text-2xl my-5 text-center'>
                         Elevate Your <br /> Product Management Career with{' '}
                         <br />
-                        {Text.map((item, index) => (
+                        {HeroText.map((item, index) => (
                             <span
                                 key={item.color}
                                 className={`transition-opacity duration-500 ${

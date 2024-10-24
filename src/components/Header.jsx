@@ -1,77 +1,24 @@
 import logo from '../assets/productLogo-f38cde65.svg'
-
-import Framee from '../assets/frameworkBannerIcon-081bdcdc.svg'
-import Portfolio from '../assets/portfolioIcon-ed329ffc.svg';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Desktop from './Desktop'
 import Mobile from './Mobile';
+import { BannerText } from '../data/NavLinks';
+import useIntervalAnimation from '../hooks/useIntervalAnimation';
 
-const Text = [
-    {
-        img: Framee,
-        text: (
-            <>
-                Discover Essential{' '}
-                <span className='underline'>Frameworks:</span> Your Roadmaps to
-                Success in Product Management!
-            </>
-        ),
-        textSm: (
-            <>
-                Discover Essential{' '}
-                <span className='underline'>Frameworks:</span> Your Roadmaps to
-                Success!
-            </>
-        ),
-        color: 'FFCBA5'
-    },
-    {
-        img: Portfolio,
-        text: (
-            <>
-                Showcase Your Success: Introducing{' '}
-                <a href='#' className='underline'>
-                    User Portfolio
-                </a>{' '}
-                - Your Portfolio in Product Management!
-            </>
-        ),
-        textSm: (
-            <>
-                Showcase Your Success: Introducing{' '}
-                <a href='#' className='underline'>
-                    User Portfolio
-                </a>
-            </>
-        ),
-        color: 'D9BCFF'
-    }
-];
 
 const Header = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [click, setClick] = useState(false)
+    const { currentIndex } = useIntervalAnimation({
+        delay: 5000,
+        data: BannerText
+    });
     
-    useEffect(() => {
-        let timeoutId;
-
-        const updateIndex = () => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % Text.length);
-        };
-
-        timeoutId = setInterval(updateIndex, 5000);
-
-        return () => {
-            clearInterval(timeoutId);
-        };
-    }, []);
-
     console.log(currentIndex);
   return (
       <>
           <div className='bg-[#144c894d]'>
               <div className='w-[95%] mx-auto py-3 font-semibold'>
-                  {Text.map((item, index) => (
+                  {BannerText.map((item, index) => (
                       <div
                           key={item.img}
                           className={`flex gap-2 items-center justify-center ${
