@@ -4,7 +4,7 @@ import useIntervalAnimation from '../hooks/useIntervalAnimation';
 
 
 const Hero = () => {
-    const { currentIndex } = useIntervalAnimation({delay: 3000, data: HeroText});
+    const { currentIndex } = useIntervalAnimation({delay: 2000, data: HeroText});
 
     return (
         <section className='hero'>
@@ -51,9 +51,9 @@ const Hero = () => {
                         {HeroText.map((item, index) => (
                             <span
                                 key={item.color}
-                                className={`transition-opacity duration-500 w-full ${
+                                className={`transition-opacity duration-100 inline-block ${
                                     index === currentIndex
-                                        ? 'text_in'
+                                        ? 'text_in_span'
                                         : 'hidden'
                                 }`}
                                 style={{
@@ -69,9 +69,9 @@ const Hero = () => {
                         {HeroText.map((item, index) => (
                             <span
                                 key={item.color}
-                                className={`transition-opacity duration-500 ${
+                                className={`transition-opacity duration-100 inline-block  ${
                                     index === currentIndex
-                                        ? 'text_in'
+                                        ? 'text_in_span'
                                         : 'hidden'
                                 }`}
                                 style={{

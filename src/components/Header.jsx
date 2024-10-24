@@ -9,7 +9,7 @@ import useIntervalAnimation from '../hooks/useIntervalAnimation';
 const Header = () => {
     const [click, setClick] = useState(false)
     const { currentIndex } = useIntervalAnimation({
-        delay: 5000,
+        delay: 3000,
         data: BannerText
     });
     

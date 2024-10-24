@@ -67,7 +67,11 @@ body {
 }
 
 .text_in {
-    animation: text_in 0.8s ease forwards;
+    animation: text_in 0.9s ease forwards;
+}
+
+.text_in_span {
+    animation: text_in_span 0.4s ease forwards;
 }
 
 .right {
@@ -133,6 +137,17 @@ body {
     }
     80% {
         transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes text_in_span {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
     }
     100% {
         opacity: 1;
