@@ -13,11 +13,11 @@ const Hero = () => {
     return (
         <section className='hero'>
             <div className=' w-[90%] mx-auto flex flex-col items-center'>
-                <div className='xl:w-[95%] mx-auto self-center flex flex-col items-start xl:items-center md:my-4 lg:mt-6 lg:mb-4'>
+                <div className='xl:w-full mx-auto self-center flex flex-col items-start xl:items-center md:my-4 lg:mt-6 lg:mb-4'>
                     <p className='text-white md:block font-semibold hidden md:text-3xl lgg:text-4xl xl:text-5xl mb-5'>
                         Elevate Your Product Management
                     </p>
-                    <p className='text-white font-semibold hidden md:text-3xl lgg:text-4xl xl:text-start xl:text-5xl  md:block  mb-5 lgg:mb-16'>
+                    <p className='text-white font-semibold hidden md:text-3xl lgg:text-4xl xl:text-5xl  md:block  mb-5 lgg:mb-16'>
                         Career with{' '}
                         {HeroText.map((item, index) => (
                             <span
@@ -55,7 +55,7 @@ const Hero = () => {
                 </div>
 
                 <div className='xl:w-full flex flex-col items-center lg:flex-row lg:justify-evenly'>
-                    <div className='h-[30dvh] md:h-[48dvh]  mb-2 md:mb-4 lg:w-[30dvw] lg:flex lg:justify-center'>
+                    <div className='h-[30dvh] md:h-[48dvh]  mb-2 md:mb-4 lg:w-[30dvw] lg:flex lg:justify-center lg:items-center'>
                         {HeroText.map((item, index) => (
                             <React.Fragment key={item.img}>
                                 <img
@@ -63,7 +63,7 @@ const Hero = () => {
                                     alt={item.imgSm}
                                     width={320}
                                     height={320}
-                                    className={` w-[317px] lg:w-full  transition-opacity duration-500 ${
+                                    className={` w-[317px] transition-opacity duration-500 ${
                                         index === currentIndex
                                             ? 'appear md:hidden'
                                             : 'hidden'
@@ -78,7 +78,7 @@ const Hero = () => {
                                     <img
                                         src={item.img}
                                         alt={item.img}
-                                        className={`  w-[349px]  transition-opacity duration-500 ${
+                                        className={`w-[349px] lg:w-[100dvw] transition-opacity duration-500 ${
                                             index === currentIndex
                                                 ? 'appear'
                                                 : 'hidden'
@@ -104,6 +104,13 @@ const Hero = () => {
                                         }}
                                         className='flex flex-col items-center justify-center gap-2 bg-white p-3 rounded-md lg:rounded-xl w-20 h-24 md:w-28 md:h-28 lg:w-24 lg:h-24 lg:pt-5 lg:px-3 xl:h-28'>
                                         <img
+                                            style={{
+                                                fill: `${
+                                                    index === currentIndex
+                                                        ? item.color
+                                                        : ''
+                                                }`
+                                            }}
                                             src={item.icon}
                                             alt=''
                                             className='w-[40%] lg:w-[50%]'
