@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 const useIntervalAnimation = ({delay, data}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(3);
 
     useEffect(() => {
         let timeoutId;

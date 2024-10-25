@@ -113,31 +113,43 @@ export const BannerText = [
 
 export const HeroText = [
     {
-        img: interviewImg,
-        imgSm: interviewImgMobile,
-        text: 'Interview Questions',
-        color: 'rgb(197, 153, 255)',
-        delay: 1000
-    },
-    {
-        img: sampleImg,
-        imgSm: sampleImgMobile,
-        text: 'Sample Q&A',
-        color: 'rgb(0, 224, 68)',
-        delay: 1500
-    },
-    {
-        img: frameworkImg,
-        imgSm: frameworkImgMobile,
-        text: 'Frameworks',
-        color: 'rgb(255, 111, 6)',
-        delay: 2000
-    },
-    {
         img: caseStudiesImg,
+        icon: Cs,
         imgSm: caseStudiesImgMobile,
         text: 'Case Studies',
         color: 'rgb(0, 255, 255)',
-        delay: 2500
+        delay: 2500,
+        registeredText:
+            'Industry relevant problem statements & case studies curated for mastering effective problem-solving skills.'
+    },
+    {
+        img: interviewImg,
+        icon: IQ,
+        imgSm: interviewImgMobile,
+        text: 'Interview Questions',
+        color: 'rgb(197, 153, 255)',
+        delay: 1000,
+        registeredText:
+            'Past interview questions gathered from reliable sources to help you understand the interview pattern of your target role/company'
+    },
+    {
+        img: sampleImg,
+        icon: Sam,
+        imgSm: sampleImgMobile,
+        text: 'Sample Q&A',
+        color: 'rgb(0, 224, 68)',
+        delay: 1500,
+        registeredText:
+            'Learn the expert’s approach from a rich collection of interview questions and their recommended answers.'
+    },
+    {
+        img: frameworkImg,
+        icon: frame,
+        imgSm: frameworkImgMobile,
+        text: 'Frameworks',
+        color: 'rgb(255, 111, 6)',
+        delay: 2000,
+        registeredText:
+            'Guiding pointers that help you solve product management problems in a structured manner'
     }
 ];
