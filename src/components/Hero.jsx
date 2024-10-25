@@ -105,9 +105,9 @@ const Hero = () => {
                                         className='flex flex-col items-center justify-center gap-2 bg-white p-3 rounded-md lg:rounded-xl w-20 h-24 md:w-28 md:h-28 lg:w-24 lg:h-24 lg:pt-5 lg:px-3 xl:h-28'>
                                         <img
                                             style={{
-                                                fill: `${
+                                                filter: `${
                                                     index === currentIndex
-                                                        ? item.color
+                                                        ? item.filter
                                                         : ''
                                                 }`
                                             }}

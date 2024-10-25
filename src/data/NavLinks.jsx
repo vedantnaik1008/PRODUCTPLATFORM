@@ -115,6 +115,7 @@ export const HeroText = [
     {
         img: caseStudiesImg,
         icon: Cs,
+        filter: 'invert(90%) sepia(38%) saturate(1802%) hue-rotate(109deg) brightness(104%) contrast(105%)',
         imgSm: caseStudiesImgMobile,
         text: 'Case Studies',
         color: 'rgb(0, 255, 255)',
@@ -125,6 +126,7 @@ export const HeroText = [
     {
         img: interviewImg,
         icon: IQ,
+        filter: 'invert(64%) sepia(68%) saturate(960%) hue-rotate(208deg) brightness(100%) contrast(102%)',
         imgSm: interviewImgMobile,
         text: 'Interview Questions',
         color: 'rgb(197, 153, 255)',
@@ -135,6 +137,7 @@ export const HeroText = [
     {
         img: sampleImg,
         icon: Sam,
+        filter: 'invert(63%) sepia(39%) saturate(3985%) hue-rotate(93deg) brightness(103%) contrast(103%)',
         imgSm: sampleImgMobile,
         text: 'Sample Q&A',
         color: 'rgb(0, 224, 68)',
@@ -145,6 +148,7 @@ export const HeroText = [
     {
         img: frameworkImg,
         icon: frame,
+        filter: 'invert(55%) sepia(50%) saturate(4562%) hue-rotate(354deg) brightness(100%) contrast(106%)',
         imgSm: frameworkImgMobile,
         text: 'Frameworks',
         color: 'rgb(255, 111, 6)',
