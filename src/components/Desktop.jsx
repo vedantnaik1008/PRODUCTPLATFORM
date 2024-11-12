@@ -65,7 +65,7 @@ const Desktop = () => {
                 ))}
                 <li className='relative '>
                     <button className='bg-white rounded-md  text-black  py-[6px] px-4 font-semibold text-[12px] lgg:text-lg  self-center xl:start-btn'>
-                        Register Now!
+                        Login
                     </button>
                 </li>
             </ul>
