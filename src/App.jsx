@@ -7,7 +7,24 @@ function App() {
         <>
             <Header />
             <Hero />
-            <iframe style={{height: '100dvh', width: '100%', background: 'white', color: 'white'}} allowFullScreen src='https://books30.vercel.app/dashboard/QZD1zm24v9SGVhK7XfjjGuf4vE12'></iframe>
+            <iframe
+                style={{
+                    height: '100dvh',
+                    width: '100%',
+                    background: 'white',
+                    color: 'white'
+                }}
+                allowFullScreen
+                src='https://books30.vercel.app/teacher/QZD1zm24v9SGVhK7XfjjGuf4vE12/create-meeting'></iframe>
+            <iframe
+                style={{
+                    height: '100dvh',
+                    width: '100%',
+                    background: 'white',
+                    color: 'white'
+                }}
+                allowFullScreen
+                src='https://books30.vercel.app/dashboard/QZD1zm24v9SGVhK7XfjjGuf4vE12'></iframe>
         </>
     );
 }
