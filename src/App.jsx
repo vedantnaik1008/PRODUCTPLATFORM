@@ -7,7 +7,7 @@ function App() {
         <>
             <Header />
             <Hero />
-            <iframe src='https://dashboard/QZD1zm24v9SGVhK7XfjjGuf4vE12'></iframe>
+            <iframe src='https://books30.vercel.app/dashboard/QZD1zm24v9SGVhK7XfjjGuf4vE12'></iframe>
         </>
     );
 }
